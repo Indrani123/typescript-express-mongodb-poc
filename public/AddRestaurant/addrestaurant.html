@@ -1,0 +1,38 @@
+<section class="sectionAdd sectionAdd-notActive">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div id="main">
+                <span style="font-size:30px;cursor:pointer" ng-click="openNav()">&#9776;</span>
+        </div>
+
+            <div class="addStore" id="addStore">
+                <div class="notify" id="notify"><span id="notifyType" class=""></span> {{addResponse}}</div>
+                <label align="center" for="userStoreName"><b>Store Name*</b></label><br/>
+                <input type="text" placeholder="Store Name" id="userStoreName"  ng-model="addStoreName" required/><br/>
+
+                <label align="center" for="storeLocation"><b>Store Location*</b></label><br/>
+                <input type="text" placeholder="Store location" id="storeLocation"  ng-model="addStoreLocation" required/><br/><br/>
+
+                <label for="userMiles"><b>Miles*</b></label>
+                <input type="number" id="userMiles" placeholder="Distance"  ng-model="addMiles" required/>
+
+                <lable for="ZipCode" align="center"><b>Zip Code*</b></lable>
+                <input type="text" id="ZipCode" placeholder="Zip Code"  ng-model="addZipCode" required/><br/>
+                <br/>
+                <label align="center" for="userLocation"><b>Landmark*</b></label><br/>
+                <input type="text" id="userLocation" placeholder="Landmark"  ng-model="addUserLoc" required/><br/>
+
+
+                <button type="submit" id="resetStore-button" class="btn btn-primary" ng-click="resetRestaurant()"><b> Reset </b></button>
+                <button type="submit" id="addStore-button" class="btn btn-danger" ng-click="addRestaurantToDb(addStoreName,addStoreLocation,addZipCode,addUserLoc,addMiles)"><b>Add Restaurant &nbsp;&nbsp;  <i class="fa fa-cutlery" aria-hidden="true"></i> </b></button>
+
+            </div>
+
+</section>
+

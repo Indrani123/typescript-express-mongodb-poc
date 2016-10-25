@@ -1,0 +1,75 @@
+{
+  "_id" : 1,
+  "masterStores" : [
+    {
+      "zipCode" : "1111",
+      "userLocation" : [
+        {
+          "userLoc" : "jw-marriot",
+          "stores" : [
+            {
+              "storename" : "subway",
+              "miles" : 10,
+              "location" : "BOSTON CITY HALL"
+            },
+            {
+              "storename" : "pizzahut",
+              "miles" : 15,
+              "location" : "Link RECORDS"
+            },
+            {
+              "storename" : "chezianno",
+              "miles" : 5,
+              "location" : "SB"
+            }
+          ]
+        },
+        {
+          "userLoc" : "crossword",
+          "stores" : [
+            {
+              "storename" : "mac-d",
+              "miles" : 10,
+              "location" : "BOSTON CITY HALL"
+            },
+            {
+              "storename" : "mac-d",
+              "miles" : 15,
+              "location" : "Link RECORDS"
+            },
+            {
+              "storename" : "chezianno",
+              "miles" : 5,
+              "location" : "SB"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zipCode" : "02201-2006",
+      "userLocation" : [
+        {
+          "userLoc" : "citi bank",
+          "stores" : [
+            {
+              "storename" : "seven-evleven",
+              "miles" : 11,
+              "location" : "REGISTRY OF BIRTHS & DEATHS"
+            },
+            {
+              "storename" : "seven-evleven",
+              "miles" : 15,
+              "location" : "OFFICE OF THE PARKING CLERK"
+            },
+            {
+              "storename" : "subway",
+              "miles" : 5,
+              "location" : "ELECTIONS"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

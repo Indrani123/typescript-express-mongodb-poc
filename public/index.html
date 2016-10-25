@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="StoresApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="StoresApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="StoresApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="StoresApp" class="no-js"> <!--<![endif]-->
+<head>
+	<title>Find Resto</title>
+
+	<!-- jQuery library -->
+	<script src="prallax/jquery.min.js"></script>
+    <script src="prallax/bootstrap-slider.js"></script>
+
+	<!-- Parallax-->
+	<script src="prallax/parallax.js-1.4.2/parallax.js-1.4.2/parallax.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body ng-controller="mainController">
+
+<ul class="navigation">
+	<li><img class="main-page-log" src="http://sigma-systems.com/wp-content/uploads/2016/06/sigma-rgb.png" href="#!/view1"/></li>
+	<li><a href="#/displayAll">Search</a></li>
+	<li><a href="#/addrestaurant">Add Restaurant</a></li>
+	<li><label class="switch">
+			<input type="checkbox" checked>
+			<div class="slider round"></div>
+		</label>
+	</li>
+</ul>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<div class="parallax-window" id="parallax" data-parallax="scroll" data-image-src="./images/head1.jpg">
+</div>
+
+<div class="section subSection">
+	<div ng-view></div>
+</div>
+
+<footer class="footer">
+	<p>Resize the browser window to see how the content respond to the resizing.</p>
+</footer>
+<script>
+	$('.parallax-window').parallax({imageSrc: './images/head1.jpg'});
+</script>
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Latest compiled JavaScript -->
+<script src="prallax/bootstrap.min.js"></script>
+
+<!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="controllers.js"></script>
+
+<!-- Style Sheet-->
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="DisplayAll/displayAll.css">
+<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="AddRestaurant/addrestaurant.css">
+<link rel="stylesheet" href="login/login.css">
+<!--Font Families-->
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Montserrat|Ubuntu" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+
+</body>
+</html>

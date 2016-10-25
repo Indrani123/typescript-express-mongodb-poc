@@ -1,0 +1,60 @@
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 align="center">Lets Search using Zip Code</h4>
+                </div>
+                <div class="dropdown">
+                    <input type="text" class="dropdown-toggle" placeholder="  --Zip Code--" data-toggle="dropdown" ng-value=selectedArea.zipCode />
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="Area in zipCodes['masterStores']" ng-click="onSelect(Area)" style="cursor: pointer">{{Area.zipCode}}</li>
+                    </ul>
+                    <input type="hidden" id="Area.zipCode" value={{selectedArea.zipCode}} />
+                </div>
+                <button class="btn btn-success" data-dismiss="modal" ng-click="selectZipCode(selectedArea)"> Search </button>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+
+<div class="search-bar">
+    <div class="sectionOne">
+        <div class="dropdown" id="userLocation">
+            <input type="text" class="dropdown-toggle" tooltip="hey" placeholder="  --Your Location --" data-toggle="dropdown" ng-value=userSelectedLocation>
+            <ul class="dropdown-menu">
+                <li ng-repeat="userLoc in allStores['userLoc']" ng-click="onSelectUserLoc(userLoc)" style="cursor: pointer">{{userLoc}}</li>
+            </ul>
+            <input type="hidden" name="location" value='{{userSelectedLocation}}' />
+        </div>
+
+        <input type="text" ng-model="storeName" id ="storeName" placeholder="Search for restaurant"/>
+
+        <input type="number" ng-model="selectedMiles" class="btn-success" required id="miles" min="1"/>
+
+        <button class="btn btn-warning" id="searchBtn" ng-click="showRestaurant(selectedArea.zipCode,userSelectedLocation,storeName,selectedMiles)" value="Search">Search</button>
+
+    </div>
+</div>
+<div style="clear:both;"></div>
+
+<div class="sectionThree">
+    <div class="dropdown">
+        <button type="text" class="dropdown-toggle btn btn-danger" data-toggle="dropdown"  > {{selectedArea.zipCode}}<span class="caret"></span></button>
+        <ul id="searchBar" class="dropdown-menu" style="">
+            <li ng-click="getAllStores()" style="cursor: pointer">All over the City</li>
+            <li ng-repeat="Area in zipCodes['masterStores']" ng-click="onChange(Area);selectZipCode(Area)" style="cursor: pointer">{{Area.zipCode}}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="searchResult">
+    <div class="searchResult-box" ng-repeat="store in storesFound" class="sectionTwo">
+        <h1>{{storeNameFound.toUpperCase()}} <img align="right" src="../images/image2.jpg" width="50px" height="50px"/></h1>
+        <hr>
+        <p style="color: #B94A48">Location: <b>{{store.location}}</b></p>
+        <p style="color: #1ab188">Distance: <b>{{store.miles}}miles</b></p>
+    </div>
+</div>
+<div style="clear:both;"></div>

@@ -1,0 +1,119 @@
+body {
+    transition: background-color .5s;
+}
+
+.sidenav {
+    float: left;
+    height: 25%;
+    width: 0;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.sectionAdd{
+    opacity: 0.95;
+    float: left;
+    background: darkseagreen;
+    margin-top:-250px;
+    margin-left: 30%;
+    height: auto;
+    width: 50%;
+}
+
+.addStore{
+    float: left;
+    margin-left: 20%;
+    margin-top: -40px;
+    width:490px;
+    height: 50%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.addStore input{
+    border-radius:5px;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    width: 95%;
+}
+
+.addStore button{
+    width:46%;
+    padding: 10px;
+    margin: 5px;
+}
+
+#ZipCode{
+    width:30%;
+}
+
+#userMiles{
+    width:20%;
+}
+
+
+.notify{
+    position:absolute;
+    height:0;
+    box-sizing:border-box;
+    color:white;
+    padding: 5px;
+    text-align:center;
+    overflow:hidden;
+    box-sizing:border-box;
+    transition:height 1s;
+    margin-left:30%;
+}
+
+#notifyType:before{
+    display:block;
+    margin-top:15px;
+
+}
+
+.active{
+    height:50px;
+    background-color: #1ab188;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+
