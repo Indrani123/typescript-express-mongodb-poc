@@ -11,14 +11,11 @@ let StoresApp = angular.module('StoresApp', ["ngRoute"])
         templateUrl:'DisplayAll/displayAll.html',
         controller:'displayAll'
     });
-        $routeProvider.otherwise('/login',{
-            templateUrl:'login/login.html',
-            controller:'login'
-        });
-        $routeProvider.when('/login',{
-            templateUrl:'login/login.html',
-            controller:'login'
-        });
+          $routeProvider.otherwise('/displayAll',{
+        templateUrl:'DisplayAll/displayAll.html',
+        controller:'displayAll'
+    });
+         
         
 }]);
 
